@@ -36,7 +36,7 @@
     - Restart mesos-slave
 
 - name: Mesos Slave launcher_dir
-  template: src=launcher_dir.j2 dest=/etc/default/mesos-slave
+  template: src=launcher_dir.j2 dest=/etc/mesos-slave/launcher_dir
   when: mesos_install_mode == "slave" or mesos_install_mode == "master-slave"
   notify:
     - Restart mesos-slave
